@@ -13,10 +13,14 @@ namespace geoportalLtTesting.Tests
         public static void TestIfServiceFromDataSearchAddsToMap()
         {
             geoportalSearchPage.NavigateToDefaultPage();
+            geoportalSearchPage.AcceptCookies();
+            geoportalSearchPage.SwitchToFrame();
             geoportalSearchPage.CheckSearchFilterServices();
+            geoportalSearchPage.MoveToElement();
             geoportalSearchPage.ClickAddToMapButton();
-
-            geoportalMapPage.ClickMapLayerInfoTab();
+            geoportalSearchPage.SwitchWindow();
+            //Driver.SwitchTo().Window(Driver.WindowHandles.Last()); //perdaryti kaip metoda
+            geoportalSearchPage.ClickMapLayerInfoTab();
             geoportalMapPage.VerifyAddedMapLayerUrl("https://www.geoportal.lt/mapproxy/nvsc_eml");
         }
     }

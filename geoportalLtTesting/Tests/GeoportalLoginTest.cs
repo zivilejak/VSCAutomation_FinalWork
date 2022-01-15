@@ -10,11 +10,10 @@ namespace geoportalLtTesting.Tests
     class GeoportalLoginTest : TestBase
     {
         //with correct credentials
-        [Test]
-        public static void loginToPageWithCorrectCredentials()
+        [TestCase("vsc_user", "vsc_test_user", TestName = "Login with correct credentials")]
+        [TestCase("vsc_user", "vsc_test_", TestName = "Login with correct credentials")]
+        public static void loginToPageWithCorrectCredentials(string loginNameInput, string passwordInput)
         {
-            string loginNameInput = "vsc_user";
-            string passwordInput = "vsc_test_user";
 
             geoportalLoginPage.NavigateToDefaultPage();
             geoportalLoginPage.CheckIfUserIsLoggedIn();

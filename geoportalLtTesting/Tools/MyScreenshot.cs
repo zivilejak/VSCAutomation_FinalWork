@@ -22,7 +22,7 @@ namespace geoportalLtTesting.Tools
             string screenshotFolder = Path.Combine(screenshotDirectory, "screenshots");
             Directory.CreateDirectory(screenshotFolder);
             //pavadinimo suformavimas
-            string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH-mm}.png";
+            string screenshotName = $"{TestContext.CurrentContext.Test.Name}_{DateTime.Now:HH-mm-ss}.png";
             string screenshotPath = Path.Combine(screenshotFolder, screenshotName);
 
             myBrowserScreenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
