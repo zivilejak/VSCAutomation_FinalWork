@@ -61,9 +61,9 @@ namespace geoportalLtTesting.Page
         }
         public GeoportalSearchPage AcceptCookies()
         {
-            Cookie myCookie = new Cookie("__utma",
-                "9865123.462022413.1642257983.1642257983.1642257983.1",
-                ".geoportal.lt",
+            Cookie myCookie = new Cookie("cookieconsent_status",
+                "dismiss",
+                "www.geoportal.lt",
                 "/",
                 DateTime.Now.AddDays(5));
 

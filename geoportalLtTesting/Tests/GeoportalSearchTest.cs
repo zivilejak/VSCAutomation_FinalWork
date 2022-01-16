@@ -19,7 +19,6 @@ namespace geoportalLtTesting.Tests
             geoportalSearchPage.MoveToElement();
             geoportalSearchPage.ClickAddToMapButton();
             geoportalSearchPage.SwitchWindow();
-            //Driver.SwitchTo().Window(Driver.WindowHandles.Last()); //perdaryti kaip metoda
             geoportalSearchPage.ClickMapLayerInfoTab();
             geoportalMapPage.VerifyAddedMapLayerUrl("https://www.geoportal.lt/mapproxy/nvsc_eml");
         }
